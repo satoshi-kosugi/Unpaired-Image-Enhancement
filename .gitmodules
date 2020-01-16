@@ -1,0 +1,3 @@
+[submodule "dehaze"]
+	path = chainer_spiral/environments/dehaze
+	url = https://github.com/meijieru/dehaze.git

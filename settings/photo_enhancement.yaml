@@ -1,0 +1,68 @@
+# default setting of train.py
+
+problem: photo_enhancement
+
+# size of picture image
+imsize: 64
+
+# number of channels
+in_channel: 3
+
+# random seed
+seed: 0
+
+# number of actors
+processes: 16
+
+# conditional generation or not
+conditional: false
+
+# mode to compute reward. l2, dcgan, or wgangp
+reward_mode: "wgangp"
+
+# -- training parameters
+# learning rate
+lr: 0.0001
+
+# weight decay to update generator and discriminator
+weight_decay: 0.0
+
+# total number of discriminator update
+# 'n' means number of discriminator update
+n_update: 6000
+
+# interval to evaluate reward
+n_eval_interval: 10
+
+# number of times to run evaluation episodes
+eval_n_runs: 1
+
+# number of generating episodes before update discriminator
+rollout_n: 20
+
+# discount factor
+gamma: 1
+
+# beta of A3C agent
+beta: 0.001
+
+# gradient penalty for WGAN-GP
+gp_lambda: 10.0
+
+# length of each drawing sequence
+max_episode_steps: 1
+
+# interval to take snapshot
+n_save_interval: 300
+
+# interval to take snapshot of observation
+n_save_final_obs_interval: 100
+
+# weight for the MSE between the original and edited images
+alpha: 100
+
+# number of descrete action stages
+L_stages: 33
+
+# for every update of the generator, the discriminator is updated U times
+U_update: 5
